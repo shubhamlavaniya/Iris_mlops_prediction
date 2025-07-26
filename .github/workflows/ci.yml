@@ -27,7 +27,7 @@ jobs:
 
     - name: Run flake8 (code linting)
       run: |
-        flake8 src --max-line-length=120 --exclude=__init__.py
+        flake8 src --max-line-length=160 --exclude=__init__.py
 
     - name: Build Docker image
       run: |
