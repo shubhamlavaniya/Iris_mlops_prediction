@@ -1,0 +1,567 @@
+[
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "load_production_model",
+        "importPath": "src.api.predict",
+        "description": "src.api.predict",
+        "isExtraImport": true,
+        "detail": "src.api.predict",
+        "documentation": {}
+    },
+    {
+        "label": "predict",
+        "importPath": "src.api.predict",
+        "description": "src.api.predict",
+        "isExtraImport": true,
+        "detail": "src.api.predict",
+        "documentation": {}
+    },
+    {
+        "label": "load_config",
+        "importPath": "src.utils",
+        "description": "src.utils",
+        "isExtraImport": true,
+        "detail": "src.utils",
+        "documentation": {}
+    },
+    {
+        "label": "mlflow.pyfunc",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "mlflow.pyfunc",
+        "description": "mlflow.pyfunc",
+        "detail": "mlflow.pyfunc",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "MlflowClient",
+        "importPath": "mlflow.tracking",
+        "description": "mlflow.tracking",
+        "isExtraImport": true,
+        "detail": "mlflow.tracking",
+        "documentation": {}
+    },
+    {
+        "label": "MlflowClient",
+        "importPath": "mlflow.tracking",
+        "description": "mlflow.tracking",
+        "isExtraImport": true,
+        "detail": "mlflow.tracking",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "mlflow",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "mlflow",
+        "description": "mlflow",
+        "detail": "mlflow",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "yaml",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "yaml",
+        "description": "yaml",
+        "detail": "yaml",
+        "documentation": {}
+    },
+    {
+        "label": "LogisticRegression",
+        "importPath": "sklearn.linear_model",
+        "description": "sklearn.linear_model",
+        "isExtraImport": true,
+        "detail": "sklearn.linear_model",
+        "documentation": {}
+    },
+    {
+        "label": "LinearRegression",
+        "importPath": "sklearn.linear_model",
+        "description": "sklearn.linear_model",
+        "isExtraImport": true,
+        "detail": "sklearn.linear_model",
+        "documentation": {}
+    },
+    {
+        "label": "RandomForestClassifier",
+        "importPath": "sklearn.ensemble",
+        "description": "sklearn.ensemble",
+        "isExtraImport": true,
+        "detail": "sklearn.ensemble",
+        "documentation": {}
+    },
+    {
+        "label": "DecisionTreeClassifier",
+        "importPath": "sklearn.tree",
+        "description": "sklearn.tree",
+        "isExtraImport": true,
+        "detail": "sklearn.tree",
+        "documentation": {}
+    },
+    {
+        "label": "SVC",
+        "importPath": "sklearn.svm",
+        "description": "sklearn.svm",
+        "isExtraImport": true,
+        "detail": "sklearn.svm",
+        "documentation": {}
+    },
+    {
+        "label": "load_iris",
+        "importPath": "sklearn.datasets",
+        "description": "sklearn.datasets",
+        "isExtraImport": true,
+        "detail": "sklearn.datasets",
+        "documentation": {}
+    },
+    {
+        "label": "StandardScaler",
+        "importPath": "sklearn.preprocessing",
+        "description": "sklearn.preprocessing",
+        "isExtraImport": true,
+        "detail": "sklearn.preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "train_test_split",
+        "importPath": "sklearn.model_selection",
+        "description": "sklearn.model_selection",
+        "isExtraImport": true,
+        "detail": "sklearn.model_selection",
+        "documentation": {}
+    },
+    {
+        "label": "train_test_split",
+        "importPath": "sklearn.model_selection",
+        "description": "sklearn.model_selection",
+        "isExtraImport": true,
+        "detail": "sklearn.model_selection",
+        "documentation": {}
+    },
+    {
+        "label": "train_test_split",
+        "importPath": "sklearn.model_selection",
+        "description": "sklearn.model_selection",
+        "isExtraImport": true,
+        "detail": "sklearn.model_selection",
+        "documentation": {}
+    },
+    {
+        "label": "mean_squared_error",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "accuracy_score",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "mlflow.sklearn",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "mlflow.sklearn",
+        "description": "mlflow.sklearn",
+        "detail": "mlflow.sklearn",
+        "documentation": {}
+    },
+    {
+        "label": "optuna",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "optuna",
+        "description": "optuna",
+        "detail": "optuna",
+        "documentation": {}
+    },
+    {
+        "label": "importlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "importlib",
+        "description": "importlib",
+        "detail": "importlib",
+        "documentation": {}
+    },
+    {
+        "label": "load_config",
+        "importPath": "utils",
+        "description": "utils",
+        "isExtraImport": true,
+        "detail": "utils",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "IrisFeatures",
+        "kind": 6,
+        "importPath": "src.api.app",
+        "description": "src.api.app",
+        "peekOfCode": "class IrisFeatures(BaseModel):\n    sepal_length: float\n    sepal_width: float\n    petal_length: float\n    petal_width: float\n@app.get(\"/\")\ndef read_root():\n    return {\"message\": \"Welcome to the Iris Classifier API!\"}\n@app.post(\"/predict\")\ndef make_prediction(features: IrisFeatures):",
+        "detail": "src.api.app",
+        "documentation": {}
+    },
+    {
+        "label": "read_root",
+        "kind": 2,
+        "importPath": "src.api.app",
+        "description": "src.api.app",
+        "peekOfCode": "def read_root():\n    return {\"message\": \"Welcome to the Iris Classifier API!\"}\n@app.post(\"/predict\")\ndef make_prediction(features: IrisFeatures):\n    input_data = features.dict()\n    prediction = predict(model, input_data)\n    return {\"prediction\": int(prediction)}",
+        "detail": "src.api.app",
+        "documentation": {}
+    },
+    {
+        "label": "make_prediction",
+        "kind": 2,
+        "importPath": "src.api.app",
+        "description": "src.api.app",
+        "peekOfCode": "def make_prediction(features: IrisFeatures):\n    input_data = features.dict()\n    prediction = predict(model, input_data)\n    return {\"prediction\": int(prediction)}",
+        "detail": "src.api.app",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "src.api.app",
+        "description": "src.api.app",
+        "peekOfCode": "app = FastAPI(title=\"Iris Classifier API\")\n# Load production model on startup\n# Load model config\nconfig = load_config(\"src/config/model_config.yaml\")\nmodel_name = config[\"model\"][\"registry_name\"]\nmodel = load_production_model(model_name)\n# Define input schema\nclass IrisFeatures(BaseModel):\n    sepal_length: float\n    sepal_width: float",
+        "detail": "src.api.app",
+        "documentation": {}
+    },
+    {
+        "label": "config",
+        "kind": 5,
+        "importPath": "src.api.app",
+        "description": "src.api.app",
+        "peekOfCode": "config = load_config(\"src/config/model_config.yaml\")\nmodel_name = config[\"model\"][\"registry_name\"]\nmodel = load_production_model(model_name)\n# Define input schema\nclass IrisFeatures(BaseModel):\n    sepal_length: float\n    sepal_width: float\n    petal_length: float\n    petal_width: float\n@app.get(\"/\")",
+        "detail": "src.api.app",
+        "documentation": {}
+    },
+    {
+        "label": "model_name",
+        "kind": 5,
+        "importPath": "src.api.app",
+        "description": "src.api.app",
+        "peekOfCode": "model_name = config[\"model\"][\"registry_name\"]\nmodel = load_production_model(model_name)\n# Define input schema\nclass IrisFeatures(BaseModel):\n    sepal_length: float\n    sepal_width: float\n    petal_length: float\n    petal_width: float\n@app.get(\"/\")\ndef read_root():",
+        "detail": "src.api.app",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "src.api.app",
+        "description": "src.api.app",
+        "peekOfCode": "model = load_production_model(model_name)\n# Define input schema\nclass IrisFeatures(BaseModel):\n    sepal_length: float\n    sepal_width: float\n    petal_length: float\n    petal_width: float\n@app.get(\"/\")\ndef read_root():\n    return {\"message\": \"Welcome to the Iris Classifier API!\"}",
+        "detail": "src.api.app",
+        "documentation": {}
+    },
+    {
+        "label": "load_production_model",
+        "kind": 2,
+        "importPath": "src.api.predict",
+        "description": "src.api.predict",
+        "peekOfCode": "def load_production_model(model_name: str):\n    mlflow.set_tracking_uri(\"file:/app/mlruns\")\n    logging.info(f\"MLflow tracking URI: {mlflow.get_tracking_uri()}\")\n    client = MlflowClient()\n    for mv in client.search_model_versions(f\"name='{model_name}'\"):\n        if mv.current_stage == \"Production\":\n            #model_uri = mv.source\n            model_uri = f\"runs:/{mv.run_id}/model\"\n            logging.info(f\"Loaded production model: {model_uri}\")\n            model = mlflow.pyfunc.load_model(\"file:/app/mlruns/739693317334162311/9a987bf0d97b495f8258454bd7a8a31d/artifacts/model\")",
+        "detail": "src.api.predict",
+        "documentation": {}
+    },
+    {
+        "label": "preprocess_input",
+        "kind": 2,
+        "importPath": "src.api.predict",
+        "description": "src.api.predict",
+        "peekOfCode": "def preprocess_input(input_data: dict):\n    try:\n        sepal_length = input_data[\"sepal_length\"]\n        sepal_width = input_data[\"sepal_width\"]\n        petal_length = input_data[\"petal_length\"]\n        petal_width = input_data[\"petal_width\"]\n        processed = {\n            \"sepal_length\": sepal_length,\n            \"sepal_width\": sepal_width,\n            \"petal_length\": petal_length,",
+        "detail": "src.api.predict",
+        "documentation": {}
+    },
+    {
+        "label": "predict",
+        "kind": 2,
+        "importPath": "src.api.predict",
+        "description": "src.api.predict",
+        "peekOfCode": "def predict(model, input_data: dict):\n    logging.info(f\"Received raw input: {input_data}\")\n    try:\n        processed_data = preprocess_input(input_data)\n        input_df = pd.DataFrame(\n            [[processed_data[col] for col in expected_columns]],\n            columns=expected_columns\n        )\n        predictions = model.predict(input_df)\n        logging.info(f\"Prediction output: {predictions[0]}\")",
+        "detail": "src.api.predict",
+        "documentation": {}
+    },
+    {
+        "label": "expected_columns",
+        "kind": 5,
+        "importPath": "src.api.predict",
+        "description": "src.api.predict",
+        "peekOfCode": "expected_columns = [\n    \"sepal_length\",\n    \"sepal_width\",\n    \"petal_length\",\n    \"petal_width\",\n    \"Petal_ratio\", \n    \"Sepal_area\",\n    \"Petal_area\"\n]\n  # <-- Tell MLflow to look inside Docker at /app/mlruns",
+        "detail": "src.api.predict",
+        "documentation": {}
+    },
+    {
+        "label": "read_config",
+        "kind": 2,
+        "importPath": "src.data_loader",
+        "description": "src.data_loader",
+        "peekOfCode": "def read_config(config_path: str = \"src/config/model_config.yaml\") -> dict:\n    \"\"\"Reads the YAML config file.\"\"\"\n    try:\n        with open(config_path, \"r\") as f:\n            config = yaml.safe_load(f)\n        logger.info(\"Config loaded successfully.\")\n        return config\n    except Exception as e:\n        logger.error(f\"Failed to load config: {e}\")\n        raise",
+        "detail": "src.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "load_data",
+        "kind": 2,
+        "importPath": "src.data_loader",
+        "description": "src.data_loader",
+        "peekOfCode": "def load_data(config: dict, processed: bool = False) -> pd.DataFrame:\n    \"\"\"\n    Loads data based on config.\n    If processed is True, loads the processed file, else loads the raw file.\n    \"\"\"\n    try:\n        if processed:\n            data_path = config[\"data\"][\"processed\"]\n            logger.info(\"Loading processed data...\")\n        else:",
+        "detail": "src.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "src.data_loader",
+        "description": "src.data_loader",
+        "peekOfCode": "logger = logging.getLogger(__name__)\ndef read_config(config_path: str = \"src/config/model_config.yaml\") -> dict:\n    \"\"\"Reads the YAML config file.\"\"\"\n    try:\n        with open(config_path, \"r\") as f:\n            config = yaml.safe_load(f)\n        logger.info(\"Config loaded successfully.\")\n        return config\n    except Exception as e:\n        logger.error(f\"Failed to load config: {e}\")",
+        "detail": "src.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "get_model",
+        "kind": 2,
+        "importPath": "src.model_builder",
+        "description": "src.model_builder",
+        "peekOfCode": "def get_model(model_name, model_params):\n    \"\"\"\n    Given the model name and parameters, returns an instance of the model.\n    \"\"\"\n    logger.info(f\"Creating model: {model_name} with parameters: {model_params}\")\n    if model_name == \"logistic_regression\":\n        model = LogisticRegression(**model_params)\n    elif model_name == \"random_forest\":\n        model = RandomForestClassifier(**model_params)\n    elif model_name == \"decision_tree\":",
+        "detail": "src.model_builder",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "src.model_builder",
+        "description": "src.model_builder",
+        "peekOfCode": "logger = logging.getLogger(__name__)\ndef get_model(model_name, model_params):\n    \"\"\"\n    Given the model name and parameters, returns an instance of the model.\n    \"\"\"\n    logger.info(f\"Creating model: {model_name} with parameters: {model_params}\")\n    if model_name == \"logistic_regression\":\n        model = LogisticRegression(**model_params)\n    elif model_name == \"random_forest\":\n        model = RandomForestClassifier(**model_params)",
+        "detail": "src.model_builder",
+        "documentation": {}
+    },
+    {
+        "label": "load_and_preprocess_iris",
+        "kind": 2,
+        "importPath": "src.preprocess",
+        "description": "src.preprocess",
+        "peekOfCode": "def load_and_preprocess_iris():\n    logger.info(\"Loading Iris dataset\")\n    iris = load_iris()\n    # Create DataFrame\n    df = pd.DataFrame(data=iris.data, columns=iris.feature_names)\n    df['target'] = iris.target\n    df['target_name'] = df['target'].apply(lambda x: iris.target_names[x])\n    # Clean column names\n    df.columns = [col.replace(\" (cm)\", \"\").replace(\" \", \"_\") for col in df.columns]\n    # Feature Engineering",
+        "detail": "src.preprocess",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "src.preprocess",
+        "description": "src.preprocess",
+        "peekOfCode": "logger = logging.getLogger(__name__)\ndef load_and_preprocess_iris():\n    logger.info(\"Loading Iris dataset\")\n    iris = load_iris()\n    # Create DataFrame\n    df = pd.DataFrame(data=iris.data, columns=iris.feature_names)\n    df['target'] = iris.target\n    df['target_name'] = df['target'].apply(lambda x: iris.target_names[x])\n    # Clean column names\n    df.columns = [col.replace(\" (cm)\", \"\").replace(\" \", \"_\") for col in df.columns]",
+        "detail": "src.preprocess",
+        "documentation": {}
+    },
+    {
+        "label": "df",
+        "kind": 5,
+        "importPath": "src.train_baseline",
+        "description": "src.train_baseline",
+        "peekOfCode": "df = pd.read_csv(\"data/processed/retail_clean.csv\")  # You’ll create this in the next notebook step\n# Simple features\ndf = df[[\"Quantity\", \"UnitPrice\", \"TotalPrice\"]]\nX = df[[\"Quantity\", \"UnitPrice\"]]\ny = df[\"TotalPrice\"]\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)\nmlflow.set_experiment(\"baseline-model\")\n# Start MLflow run\nwith mlflow.start_run():\n    model = LinearRegression()",
+        "detail": "src.train_baseline",
+        "documentation": {}
+    },
+    {
+        "label": "df",
+        "kind": 5,
+        "importPath": "src.train_baseline",
+        "description": "src.train_baseline",
+        "peekOfCode": "df = df[[\"Quantity\", \"UnitPrice\", \"TotalPrice\"]]\nX = df[[\"Quantity\", \"UnitPrice\"]]\ny = df[\"TotalPrice\"]\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)\nmlflow.set_experiment(\"baseline-model\")\n# Start MLflow run\nwith mlflow.start_run():\n    model = LinearRegression()\n    model.fit(X_train, y_train)\n    preds = model.predict(X_test)",
+        "detail": "src.train_baseline",
+        "documentation": {}
+    },
+    {
+        "label": "X",
+        "kind": 5,
+        "importPath": "src.train_baseline",
+        "description": "src.train_baseline",
+        "peekOfCode": "X = df[[\"Quantity\", \"UnitPrice\"]]\ny = df[\"TotalPrice\"]\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)\nmlflow.set_experiment(\"baseline-model\")\n# Start MLflow run\nwith mlflow.start_run():\n    model = LinearRegression()\n    model.fit(X_train, y_train)\n    preds = model.predict(X_test)\n    mse = mean_squared_error(y_test, preds)",
+        "detail": "src.train_baseline",
+        "documentation": {}
+    },
+    {
+        "label": "y",
+        "kind": 5,
+        "importPath": "src.train_baseline",
+        "description": "src.train_baseline",
+        "peekOfCode": "y = df[\"TotalPrice\"]\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)\nmlflow.set_experiment(\"baseline-model\")\n# Start MLflow run\nwith mlflow.start_run():\n    model = LinearRegression()\n    model.fit(X_train, y_train)\n    preds = model.predict(X_test)\n    mse = mean_squared_error(y_test, preds)\n    mlflow.log_param(\"model_type\", \"LinearRegression\")",
+        "detail": "src.train_baseline",
+        "documentation": {}
+    },
+    {
+        "label": "config",
+        "kind": 5,
+        "importPath": "src.train_model",
+        "description": "src.train_model",
+        "peekOfCode": "config = load_config(\"src/config/model_config.yaml\")\nmodels_config = config[\"models\"]\ntarget_column = config[\"model\"][\"target_column\"]\n# Load dataset\ndf = pd.read_csv(config[\"data\"][\"processed\"])\nX = df.drop(columns=[target_column])\ny = df[target_column]\n# Split data: train -> train + val, test\nX_train_full, X_test, y_train_full, y_test = train_test_split(X, y, test_size=config[\"model\"][\"test_size\"], random_state=config[\"model\"][\"random_state\"])\nX_train, X_val, y_train, y_val = train_test_split(X_train_full, y_train_full, test_size=0.25, random_state=42)",
+        "detail": "src.train_model",
+        "documentation": {}
+    },
+    {
+        "label": "models_config",
+        "kind": 5,
+        "importPath": "src.train_model",
+        "description": "src.train_model",
+        "peekOfCode": "models_config = config[\"models\"]\ntarget_column = config[\"model\"][\"target_column\"]\n# Load dataset\ndf = pd.read_csv(config[\"data\"][\"processed\"])\nX = df.drop(columns=[target_column])\ny = df[target_column]\n# Split data: train -> train + val, test\nX_train_full, X_test, y_train_full, y_test = train_test_split(X, y, test_size=config[\"model\"][\"test_size\"], random_state=config[\"model\"][\"random_state\"])\nX_train, X_val, y_train, y_val = train_test_split(X_train_full, y_train_full, test_size=0.25, random_state=42)\n# Track best model across all candidates",
+        "detail": "src.train_model",
+        "documentation": {}
+    },
+    {
+        "label": "target_column",
+        "kind": 5,
+        "importPath": "src.train_model",
+        "description": "src.train_model",
+        "peekOfCode": "target_column = config[\"model\"][\"target_column\"]\n# Load dataset\ndf = pd.read_csv(config[\"data\"][\"processed\"])\nX = df.drop(columns=[target_column])\ny = df[target_column]\n# Split data: train -> train + val, test\nX_train_full, X_test, y_train_full, y_test = train_test_split(X, y, test_size=config[\"model\"][\"test_size\"], random_state=config[\"model\"][\"random_state\"])\nX_train, X_val, y_train, y_val = train_test_split(X_train_full, y_train_full, test_size=0.25, random_state=42)\n# Track best model across all candidates\nbest_model_name = None",
+        "detail": "src.train_model",
+        "documentation": {}
+    },
+    {
+        "label": "df",
+        "kind": 5,
+        "importPath": "src.train_model",
+        "description": "src.train_model",
+        "peekOfCode": "df = pd.read_csv(config[\"data\"][\"processed\"])\nX = df.drop(columns=[target_column])\ny = df[target_column]\n# Split data: train -> train + val, test\nX_train_full, X_test, y_train_full, y_test = train_test_split(X, y, test_size=config[\"model\"][\"test_size\"], random_state=config[\"model\"][\"random_state\"])\nX_train, X_val, y_train, y_val = train_test_split(X_train_full, y_train_full, test_size=0.25, random_state=42)\n# Track best model across all candidates\nbest_model_name = None\nbest_model_score = 0\nbest_model_instance = None",
+        "detail": "src.train_model",
+        "documentation": {}
+    },
+    {
+        "label": "X",
+        "kind": 5,
+        "importPath": "src.train_model",
+        "description": "src.train_model",
+        "peekOfCode": "X = df.drop(columns=[target_column])\ny = df[target_column]\n# Split data: train -> train + val, test\nX_train_full, X_test, y_train_full, y_test = train_test_split(X, y, test_size=config[\"model\"][\"test_size\"], random_state=config[\"model\"][\"random_state\"])\nX_train, X_val, y_train, y_val = train_test_split(X_train_full, y_train_full, test_size=0.25, random_state=42)\n# Track best model across all candidates\nbest_model_name = None\nbest_model_score = 0\nbest_model_instance = None\nbest_model_params = {}",
+        "detail": "src.train_model",
+        "documentation": {}
+    },
+    {
+        "label": "y",
+        "kind": 5,
+        "importPath": "src.train_model",
+        "description": "src.train_model",
+        "peekOfCode": "y = df[target_column]\n# Split data: train -> train + val, test\nX_train_full, X_test, y_train_full, y_test = train_test_split(X, y, test_size=config[\"model\"][\"test_size\"], random_state=config[\"model\"][\"random_state\"])\nX_train, X_val, y_train, y_val = train_test_split(X_train_full, y_train_full, test_size=0.25, random_state=42)\n# Track best model across all candidates\nbest_model_name = None\nbest_model_score = 0\nbest_model_instance = None\nbest_model_params = {}\nbest_model_module_class = \"\"",
+        "detail": "src.train_model",
+        "documentation": {}
+    },
+    {
+        "label": "best_model_name",
+        "kind": 5,
+        "importPath": "src.train_model",
+        "description": "src.train_model",
+        "peekOfCode": "best_model_name = None\nbest_model_score = 0\nbest_model_instance = None\nbest_model_params = {}\nbest_model_module_class = \"\"\nmlflow.set_experiment(config[\"experiment\"][\"name\"])\n# Loop through each model\nfor model_name, model_info in models_config.items():\n    print(f\"\\n Tuning model: {model_name}\")\n    def objective(trial):",
+        "detail": "src.train_model",
+        "documentation": {}
+    },
+    {
+        "label": "best_model_score",
+        "kind": 5,
+        "importPath": "src.train_model",
+        "description": "src.train_model",
+        "peekOfCode": "best_model_score = 0\nbest_model_instance = None\nbest_model_params = {}\nbest_model_module_class = \"\"\nmlflow.set_experiment(config[\"experiment\"][\"name\"])\n# Loop through each model\nfor model_name, model_info in models_config.items():\n    print(f\"\\n Tuning model: {model_name}\")\n    def objective(trial):\n        trial_params = {}",
+        "detail": "src.train_model",
+        "documentation": {}
+    },
+    {
+        "label": "best_model_instance",
+        "kind": 5,
+        "importPath": "src.train_model",
+        "description": "src.train_model",
+        "peekOfCode": "best_model_instance = None\nbest_model_params = {}\nbest_model_module_class = \"\"\nmlflow.set_experiment(config[\"experiment\"][\"name\"])\n# Loop through each model\nfor model_name, model_info in models_config.items():\n    print(f\"\\n Tuning model: {model_name}\")\n    def objective(trial):\n        trial_params = {}\n        search_space = model_info.get(\"optuna_search_space\", {})",
+        "detail": "src.train_model",
+        "documentation": {}
+    },
+    {
+        "label": "best_model_params",
+        "kind": 5,
+        "importPath": "src.train_model",
+        "description": "src.train_model",
+        "peekOfCode": "best_model_params = {}\nbest_model_module_class = \"\"\nmlflow.set_experiment(config[\"experiment\"][\"name\"])\n# Loop through each model\nfor model_name, model_info in models_config.items():\n    print(f\"\\n Tuning model: {model_name}\")\n    def objective(trial):\n        trial_params = {}\n        search_space = model_info.get(\"optuna_search_space\", {})\n        for param_name, param_def in search_space.items():",
+        "detail": "src.train_model",
+        "documentation": {}
+    },
+    {
+        "label": "best_model_module_class",
+        "kind": 5,
+        "importPath": "src.train_model",
+        "description": "src.train_model",
+        "peekOfCode": "best_model_module_class = \"\"\nmlflow.set_experiment(config[\"experiment\"][\"name\"])\n# Loop through each model\nfor model_name, model_info in models_config.items():\n    print(f\"\\n Tuning model: {model_name}\")\n    def objective(trial):\n        trial_params = {}\n        search_space = model_info.get(\"optuna_search_space\", {})\n        for param_name, param_def in search_space.items():\n            if param_def[\"type\"] == \"int\":",
+        "detail": "src.train_model",
+        "documentation": {}
+    },
+    {
+        "label": "load_config",
+        "kind": 2,
+        "importPath": "src.utils",
+        "description": "src.utils",
+        "peekOfCode": "def load_config(path: str) -> dict:\n    \"\"\"Loads a YAML configuration file from the given path.\"\"\"\n    with open(path, \"r\") as file:\n        return yaml.safe_load(file)\ndef sample_hyperparameters(trial, search_space):\n    params = {}\n    for param_name, param_def in search_space.items():\n        if param_def[\"type\"] == \"int\":\n            params[param_name] = trial.suggest_int(param_name, param_def[\"low\"], param_def[\"high\"])\n        elif param_def[\"type\"] == \"float\":",
+        "detail": "src.utils",
+        "documentation": {}
+    },
+    {
+        "label": "sample_hyperparameters",
+        "kind": 2,
+        "importPath": "src.utils",
+        "description": "src.utils",
+        "peekOfCode": "def sample_hyperparameters(trial, search_space):\n    params = {}\n    for param_name, param_def in search_space.items():\n        if param_def[\"type\"] == \"int\":\n            params[param_name] = trial.suggest_int(param_name, param_def[\"low\"], param_def[\"high\"])\n        elif param_def[\"type\"] == \"float\":\n            params[param_name] = trial.suggest_float(param_name, param_def[\"low\"], param_def[\"high\"], log=param_def.get(\"log\", False))\n        elif param_def[\"type\"] == \"categorical\":\n            params[param_name] = trial.suggest_categorical(param_name, param_def[\"choices\"])\n    return params",
+        "detail": "src.utils",
+        "documentation": {}
+    }
+]

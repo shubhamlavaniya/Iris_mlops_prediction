@@ -1,5 +1,5 @@
 pandas
-numpy
+numpy==1.24.4
 scikit-learn
 matplotlib
 seaborn
@@ -8,4 +8,7 @@ grafana
 fastapi
 uvicorn
 optuna
-mlflow
+mlflow==2.13.0
+scipy==1.10.1
+pyarrow==14.0.2
+joblib
