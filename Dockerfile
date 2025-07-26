@@ -12,12 +12,12 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # At the bottom of your Dockerfile
-RUN ls -l
-COPY mlruns /app/mlruns
+#RUN ls -l
+#COPY mlruns /app/mlruns
 
 # Set environment variable to avoid creating .pyc files
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
 
 # Expose FastAPI default port
 EXPOSE 8000
