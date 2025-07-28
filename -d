@@ -1,4 +1,0 @@
-{"detail":[{"type":"missing","loc":["body"],"msg":"Field required","input":null}]}--_curl_--"sepal_length": 5.1
---_curl_-- "sepal_width": 3.5
---_curl_-- "petal_length": 1.4
---_curl_-- "petal_width": 0.2
