@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [main]
 
+env:
+  ECR_REPOSITORY: iris-model
+  IMAGE_TAG: latest
+
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
