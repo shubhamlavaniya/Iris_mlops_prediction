@@ -4,8 +4,13 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from src.api.predict import load_production_model, predict
 from src.utils import load_config
+from prometheus_fastapi_instrumentator import Instrumentator
+
 
 app = FastAPI(title="Iris Classifier API")
+
+# Initialize Prometheus metrics
+Instrumentator().instrument(app).expose(app)
 
 # Load production model on startup
 # Load model config

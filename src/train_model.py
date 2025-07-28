@@ -72,6 +72,7 @@ for model_name, model_info in models_config.items():
     ModelClass = getattr(importlib.import_module(module_name), class_name)
     final_model = ModelClass(**model_best_params)
 
+
     # Log to MLflow
     with mlflow.start_run(run_name=f"{model_name}_run") as run:
         final_model.fit(X_train_full, y_train_full)

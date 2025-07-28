@@ -44,7 +44,9 @@ def load_production_model(model_name: str):
             #model_uri = mv.source
             model_uri = f"runs:/{mv.run_id}/model"
             logging.info(f"Loaded production model: {model_uri}")
+            #model = mlflow.pyfunc.load_model(model_uri)
             model = mlflow.pyfunc.load_model("file:/app/mlruns/739693317334162311/9a987bf0d97b495f8258454bd7a8a31d/artifacts/model")
+
             return model
     raise Exception(f"No model in Production stage for '{model_name}'.")
 
