@@ -64,7 +64,7 @@ jobs:
           docker rm iris-app || true
 
           echo "Running latest container..."
-          docker run -d --name iris-app -p 80:80 $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+          docker run -d --name iris-app -p 80:8000 $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
         EOF
 
 
