@@ -5,7 +5,10 @@ import pandas as pd
 from mlflow.tracking import MlflowClient
 import logging
 import mlflow
+import os
 
+# ---- Ensure Logs Directory Exists ----
+os.makedirs("logs", exist_ok=True)
 
 # ---- Setup Logging ----
 logging.basicConfig(
