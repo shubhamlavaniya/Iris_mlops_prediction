@@ -9,7 +9,7 @@ import os
 
 # ---- Ensure Logs Directory Exists ----
 
-# ---- Setup Logging ----
+# # ---- Setup Logging ----
 # logging.basicConfig(
 #     level=logging.INFO,
 #     format="%(asctime)s - %(levelname)s - %(message)s",
@@ -19,15 +19,18 @@ import os
 #     ]
 # )
 
-log_dir = os.path.join(os.path.dirname(__file__), "../../logs")
-os.makedirs(log_dir, exist_ok=True)
-
-log_file_path = os.path.join(log_dir, "prediction.log")
-
+# Set logger
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
-logger.addHandler(logging.StreamHandler())
-logger.addHandler(logging.FileHandler(log_file_path))
+
+# CloudWatch-compatible log format
+formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+
+# Log to stdout (Docker/EC2 will forward this to CloudWatch if agent is set up)
+stream_handler = logging.StreamHandler()
+stream_handler.setFormatter(formatter)
+logger.addHandler(stream_handler)
+
 
 # ---- Model Feature Order ----
 expected_columns = [

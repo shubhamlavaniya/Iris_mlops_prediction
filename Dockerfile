@@ -12,8 +12,6 @@ RUN pip install -r requirements.txt
 # Copy project files
 COPY . .
 
-# Ensure /app/logs exists
-RUN mkdir -p /app/logs
 
 # At the bottom of your Dockerfile
 #RUN ls -l
