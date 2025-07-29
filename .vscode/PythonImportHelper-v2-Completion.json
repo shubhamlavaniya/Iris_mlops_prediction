@@ -348,6 +348,33 @@
         "documentation": {}
     },
     {
+        "label": "log_dir",
+        "kind": 5,
+        "importPath": "src.api.predict",
+        "description": "src.api.predict",
+        "peekOfCode": "log_dir = os.path.join(os.path.dirname(__file__), \"../../logs\")\nos.makedirs(log_dir, exist_ok=True)\nlog_file_path = os.path.join(log_dir, \"prediction.log\")\nlogger = logging.getLogger(__name__)\nlogger.setLevel(logging.INFO)\nlogger.addHandler(logging.StreamHandler())\nlogger.addHandler(logging.FileHandler(log_file_path))\n# ---- Model Feature Order ----\nexpected_columns = [\n    \"sepal_length\",",
+        "detail": "src.api.predict",
+        "documentation": {}
+    },
+    {
+        "label": "log_file_path",
+        "kind": 5,
+        "importPath": "src.api.predict",
+        "description": "src.api.predict",
+        "peekOfCode": "log_file_path = os.path.join(log_dir, \"prediction.log\")\nlogger = logging.getLogger(__name__)\nlogger.setLevel(logging.INFO)\nlogger.addHandler(logging.StreamHandler())\nlogger.addHandler(logging.FileHandler(log_file_path))\n# ---- Model Feature Order ----\nexpected_columns = [\n    \"sepal_length\",\n    \"sepal_width\",\n    \"petal_length\",",
+        "detail": "src.api.predict",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "src.api.predict",
+        "description": "src.api.predict",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nlogger.setLevel(logging.INFO)\nlogger.addHandler(logging.StreamHandler())\nlogger.addHandler(logging.FileHandler(log_file_path))\n# ---- Model Feature Order ----\nexpected_columns = [\n    \"sepal_length\",\n    \"sepal_width\",\n    \"petal_length\",\n    \"petal_width\",",
+        "detail": "src.api.predict",
+        "documentation": {}
+    },
+    {
         "label": "expected_columns",
         "kind": 5,
         "importPath": "src.api.predict",

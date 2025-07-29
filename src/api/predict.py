@@ -8,17 +8,26 @@ import mlflow
 import os
 
 # ---- Ensure Logs Directory Exists ----
-os.makedirs("logs", exist_ok=True)
 
 # ---- Setup Logging ----
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s",
-    handlers=[
-        logging.FileHandler("logs/prediction.log"),  # Save logs to a file
-        logging.StreamHandler()                      # Also print logs to console
-    ]
-)
+# logging.basicConfig(
+#     level=logging.INFO,
+#     format="%(asctime)s - %(levelname)s - %(message)s",
+#     handlers=[
+#         logging.FileHandler("logs/prediction.log"),  # Save logs to a file
+#         logging.StreamHandler()                      # Also print logs to console
+#     ]
+# )
+
+log_dir = os.path.join(os.path.dirname(__file__), "../../logs")
+os.makedirs(log_dir, exist_ok=True)
+
+log_file_path = os.path.join(log_dir, "prediction.log")
+
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+logger.addHandler(logging.StreamHandler())
+logger.addHandler(logging.FileHandler(log_file_path))
 
 # ---- Model Feature Order ----
 expected_columns = [
