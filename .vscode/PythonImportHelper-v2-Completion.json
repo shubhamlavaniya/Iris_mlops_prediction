@@ -40,6 +40,14 @@
         "documentation": {}
     },
     {
+        "label": "Instrumentator",
+        "importPath": "prometheus_fastapi_instrumentator",
+        "description": "prometheus_fastapi_instrumentator",
+        "isExtraImport": true,
+        "detail": "prometheus_fastapi_instrumentator",
+        "documentation": {}
+    },
+    {
         "label": "mlflow.pyfunc",
         "kind": 6,
         "isExtraImport": true,
@@ -281,7 +289,7 @@
         "kind": 5,
         "importPath": "src.api.app",
         "description": "src.api.app",
-        "peekOfCode": "app = FastAPI(title=\"Iris Classifier API\")\n# Load production model on startup\n# Load model config\nconfig = load_config(\"src/config/model_config.yaml\")\nmodel_name = config[\"model\"][\"registry_name\"]\nmodel = load_production_model(model_name)\n# Define input schema\nclass IrisFeatures(BaseModel):\n    sepal_length: float\n    sepal_width: float",
+        "peekOfCode": "app = FastAPI(title=\"Iris Classifier API\")\n# Initialize Prometheus metrics\nInstrumentator().instrument(app).expose(app)\n# Load production model on startup\n# Load model config\nconfig = load_config(\"src/config/model_config.yaml\")\nmodel_name = config[\"model\"][\"registry_name\"]\nmodel = load_production_model(model_name)\n# Define input schema\nclass IrisFeatures(BaseModel):",
         "detail": "src.api.app",
         "documentation": {}
     },
@@ -317,7 +325,7 @@
         "kind": 2,
         "importPath": "src.api.predict",
         "description": "src.api.predict",
-        "peekOfCode": "def load_production_model(model_name: str):\n    mlflow.set_tracking_uri(\"file:/app/mlruns\")\n    logging.info(f\"MLflow tracking URI: {mlflow.get_tracking_uri()}\")\n    client = MlflowClient()\n    for mv in client.search_model_versions(f\"name='{model_name}'\"):\n        if mv.current_stage == \"Production\":\n            #model_uri = mv.source\n            model_uri = f\"runs:/{mv.run_id}/model\"\n            logging.info(f\"Loaded production model: {model_uri}\")\n            model = mlflow.pyfunc.load_model(\"file:/app/mlruns/739693317334162311/9a987bf0d97b495f8258454bd7a8a31d/artifacts/model\")",
+        "peekOfCode": "def load_production_model(model_name: str):\n    mlflow.set_tracking_uri(\"file:/app/mlruns\")\n    logging.info(f\"MLflow tracking URI: {mlflow.get_tracking_uri()}\")\n    client = MlflowClient()\n    for mv in client.search_model_versions(f\"name='{model_name}'\"):\n        if mv.current_stage == \"Production\":\n            #model_uri = mv.source\n            model_uri = f\"runs:/{mv.run_id}/model\"\n            logging.info(f\"Loaded production model: {model_uri}\")\n            #model = mlflow.pyfunc.load_model(model_uri)",
         "detail": "src.api.predict",
         "documentation": {}
     },

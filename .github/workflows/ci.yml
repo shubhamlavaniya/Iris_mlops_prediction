@@ -40,6 +40,29 @@ jobs:
     - name: Push Docker image to Amazon ECR
       run: |
         docker push ${{ steps.login-ecr.outputs.registry }}/$ECR_REPOSITORY:$IMAGE_TAG
+    
+    - name: Deploy to EC2
+      env:
+          EC2_HOST: ${{ secrets.EC2_HOST }}
+          EC2_USER: ubuntu
+          EC2_KEY: ${{ secrets.EC2_SSH_KEY }}
+      run: |
+          echo "$EC2_KEY" > ec2_key.pem
+          chmod 400 ec2_key.pem
+
+          echo "Connecting to EC2 and deploying..."
+          ssh -o StrictHostKeyChecking=no -i ec2_key.pem $EC2_USER@$EC2_HOST << 'EOF'
+            set -e
+            echo "Pulling latest Docker image from ECR..."
+            aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin ${{ steps.login-ecr.outputs.registry }}
+
+            echo "Stopping and removing old container..."
+            docker stop iris-app || true
+            docker rm iris-app || true
+
+            echo "Running latest container..."
+            docker run -d --name iris-app -p 80:80 ${{ steps.login-ecr.outputs.registry }}/iris-mlops-app:latest
+          EOF
 
       
 
