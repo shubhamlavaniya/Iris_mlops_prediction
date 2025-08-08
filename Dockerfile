@@ -14,7 +14,7 @@ COPY . .
 
 # At the bottom of your Dockerfile
 #RUN ls -l
-COPY mlruns /app/mlruns
+#COPY mlruns /app/mlruns
 
 # Set environment variable to avoid creating .pyc files
 ENV PYTHONDONTWRITEBYTECODE=1
