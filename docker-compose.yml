@@ -3,15 +3,33 @@ version: "3.8"
 services:
   iris-app:
     image: iris-fastapi-app:latest
-    #image: 339712962914.dkr.ecr.us-east-1.amazonaws.com/iris-model:latest # Uncomment if using ECR
     container_name: iris-app
     ports:
       - "8000:8000"
+    volumes:
+      - ./logs:/app/logs
+    environment:
+      - DATABASE_URL=sqlite:////app/logs/logs.db
+    networks:
+      - monitoring
+
+  sqlite-web:
+    image: coleifer/sqlite-web
+    container_name: sqlite-web
+    ports:
+      - "8081:8080"
+    volumes:
+      # Corrected volume mapping to point to the logs folder
+      - ./logs/logs.db:/data/logs.db
+    command: sqlite_web --host 0.0.0.0 /data/logs.db
+    depends_on:
+      - iris-app
     networks:
       - monitoring
 
   prometheus:
     image: prom/prometheus:latest
+    container_name: prometheus
     volumes:
       - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
     ports:
@@ -21,8 +39,14 @@ services:
 
   grafana:
     image: grafana/grafana:latest
+    container_name: grafana
     ports:
       - "3000:3000"
+    volumes:
+      - ./grafana:/var/lib/grafana
+      - ./logs:/data
+    environment:
+    - GF_INSTALL_PLUGINS=frser-sqlite-datasource
     networks:
       - monitoring
 

@@ -2,7 +2,9 @@
 FROM python:3.10-slim
 
 # Set working directory
+RUN mkdir -p /app/logs
 WORKDIR /app
+
 
 # Copy requirements and install them
 COPY requirements.txt .

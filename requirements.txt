@@ -13,4 +13,7 @@ scipy==1.10.1
 pyarrow==14.0.2
 joblib
 prometheus-fastapi-instrumentator
+sqlalchemy 
+psycopg2-binary
+
 
