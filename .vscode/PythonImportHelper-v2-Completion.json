@@ -348,38 +348,11 @@
         "documentation": {}
     },
     {
-        "label": "logger",
-        "kind": 5,
-        "importPath": "src.api.predict",
-        "description": "src.api.predict",
-        "peekOfCode": "logger = logging.getLogger(__name__)\nlogger.setLevel(logging.INFO)\n# CloudWatch-compatible log format\nformatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')\n# Log to stdout (Docker/EC2 will forward this to CloudWatch if agent is set up)\nstream_handler = logging.StreamHandler()\nstream_handler.setFormatter(formatter)\nlogger.addHandler(stream_handler)\n# ---- Model Feature Order ----\nexpected_columns = [",
-        "detail": "src.api.predict",
-        "documentation": {}
-    },
-    {
-        "label": "formatter",
-        "kind": 5,
-        "importPath": "src.api.predict",
-        "description": "src.api.predict",
-        "peekOfCode": "formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')\n# Log to stdout (Docker/EC2 will forward this to CloudWatch if agent is set up)\nstream_handler = logging.StreamHandler()\nstream_handler.setFormatter(formatter)\nlogger.addHandler(stream_handler)\n# ---- Model Feature Order ----\nexpected_columns = [\n    \"sepal_length\",\n    \"sepal_width\",\n    \"petal_length\",",
-        "detail": "src.api.predict",
-        "documentation": {}
-    },
-    {
-        "label": "stream_handler",
-        "kind": 5,
-        "importPath": "src.api.predict",
-        "description": "src.api.predict",
-        "peekOfCode": "stream_handler = logging.StreamHandler()\nstream_handler.setFormatter(formatter)\nlogger.addHandler(stream_handler)\n# ---- Model Feature Order ----\nexpected_columns = [\n    \"sepal_length\",\n    \"sepal_width\",\n    \"petal_length\",\n    \"petal_width\",\n    \"Petal_ratio\", ",
-        "detail": "src.api.predict",
-        "documentation": {}
-    },
-    {
         "label": "expected_columns",
         "kind": 5,
         "importPath": "src.api.predict",
         "description": "src.api.predict",
-        "peekOfCode": "expected_columns = [\n    \"sepal_length\",\n    \"sepal_width\",\n    \"petal_length\",\n    \"petal_width\",\n    \"Petal_ratio\", \n    \"Sepal_area\",\n    \"Petal_area\"\n]\n  # <-- Tell MLflow to look inside Docker at /app/mlruns",
+        "peekOfCode": "expected_columns = [\n    \"sepal_length\",\n    \"sepal_width\",\n    \"petal_length\",\n    \"petal_width\",\n    \"Petal_ratio\", \n    \"Sepal_area\",\n    \"Petal_area\"\n]\n# ---- Load Model from MLflow Registry ----",
         "detail": "src.api.predict",
         "documentation": {}
     },

@@ -8,28 +8,32 @@ import mlflow
 import os
 
 # ---- Ensure Logs Directory Exists ----
+if not os.path.exists("logs"):
+    os.makedirs("logs")
 
-# # ---- Setup Logging ----
-# logging.basicConfig(
-#     level=logging.INFO,
-#     format="%(asctime)s - %(levelname)s - %(message)s",
-#     handlers=[
-#         logging.FileHandler("logs/prediction.log"),  # Save logs to a file
-#         logging.StreamHandler()                      # Also print logs to console
-#     ]
-# )
+# ---- Setup Logging ----
 
-# Set logger
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    handlers=[
+        logging.FileHandler("logs/prediction.log"),  # Save logs to a file
+        logging.StreamHandler()                      # Also print logs to console
+    ]
+)
 
-# CloudWatch-compatible log format
-formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+#### Uncomment if you want to set up CloudWatch logging
+# # Set logger
+# logger = logging.getLogger(__name__)
+# logger.setLevel(logging.INFO)
 
-# Log to stdout (Docker/EC2 will forward this to CloudWatch if agent is set up)
-stream_handler = logging.StreamHandler()
-stream_handler.setFormatter(formatter)
-logger.addHandler(stream_handler)
+# # CloudWatch-compatible log format
+# formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+
+# # Log to stdout (Docker/EC2 will forward this to CloudWatch if agent is set up)
+# stream_handler = logging.StreamHandler()
+# stream_handler.setFormatter(formatter)
+# logger.addHandler(stream_handler)
 
 
 # ---- Model Feature Order ----
@@ -42,9 +46,6 @@ expected_columns = [
     "Sepal_area",
     "Petal_area"
 ]
-
-
-  # <-- Tell MLflow to look inside Docker at /app/mlruns
 
 
 # ---- Load Model from MLflow Registry ----

@@ -2,8 +2,8 @@ version: "3.8"
 
 services:
   iris-app:
-    #image: iris-fastapi-app:latest
-    image: 339712962914.dkr.ecr.us-east-1.amazonaws.com/iris-model:latest
+    image: iris-fastapi-app:latest
+    #image: 339712962914.dkr.ecr.us-east-1.amazonaws.com/iris-model:latest # Uncomment if using ECR
     container_name: iris-app
     ports:
       - "8000:8000"
