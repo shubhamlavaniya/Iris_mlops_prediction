@@ -47,16 +47,22 @@ jobs:
       run: |
         docker push ${{ steps.login-ecr.outputs.registry }}/$ECR_REPOSITORY:$IMAGE_TAG
     
+    # Build Docker image and push to Docker Hub
+    - name: Build Docker image
+      run: | 
+        docker build -t iris-app:latest .
 
-    # Push to Docker Hub
+    # Log in to Docker Hub
     - name: Log in to Docker Hub
       run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-
+  
+    # Tag and Push to Docker Hub
     - name: Tag and Push to Docker Hub
       run: |
         docker tag iris-app:latest ${{ secrets.DOCKER_USERNAME }}/iris-app:latest
         docker push ${{ secrets.DOCKER_USERNAME }}/iris-app:latest
     
+    # Deploy to EC2
     
     - name: Deploy to EC2
       env:
