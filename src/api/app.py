@@ -7,7 +7,7 @@ from pydantic import BaseModel
 from src.api.predict import load_production_model, predict
 from src.utils import load_config
 from prometheus_fastapi_instrumentator import Instrumentator
-from src.logging import log_prediction, init_db, log_error
+from app_logging import log_prediction, init_db, log_error
 
 app = FastAPI(title="Iris Classifier API")
 init_db()

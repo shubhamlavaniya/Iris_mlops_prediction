@@ -1,6 +1,10 @@
+# Configuration for Model Training and Evaluation
+# This file defines the model configurations, data paths, and experiment settings.
+
 data:
   raw: data/raw/iris.csv
   processed: data/processed/iris_cleaned.csv
+
 
 experiment:
   name: model_comparison_experiment
@@ -11,6 +15,9 @@ model:
   random_state: 42
   target_column: target
   registry_name: iris_best_model
+
+
+# Model Configuration
 
 models:
   logistic_regression:

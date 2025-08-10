@@ -4,13 +4,13 @@ This project demonstrates a complete **End-to-End MLOps workflow** using the Iri
 
 ---
 
-## 📌 Objective
+## Objective
 
 Automate and scale the lifecycle of an ML model from experimentation to production deployment using real-world MLOps tools and cloud infrastructure.
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 
 - **Data & Modeling**: scikit-learn, pandas, Optuna
 - **Experiment Tracking**: MLflow
@@ -18,9 +18,9 @@ Automate and scale the lifecycle of an ML model from experimentation to producti
 - **Containerization**: Docker
 - **CI/CD**: GitHub Actions
 - **Deployment**: AWS EC2 + ECR
-- **Logging**: Amazon CloudWatch
+- **Logging**: SQLite + Grafana Dashboard
+- **Database Viewer**: SQLite Web UI
 - **Monitoring**: Prometheus & Grafana (local setup)
-- **A/B Testing**: Supported locally
 
 ---
 
@@ -35,22 +35,39 @@ Automate and scale the lifecycle of an ML model from experimentation to producti
 │   ├── baseline.py
 │   ├── train_model.py
 │   ├── data_loader.py
+│   ├── logging.py
 │   ├── model_builder.py
+│   ├── preprocess.py
 │   ├── utils.py
 │   └── config/
 │       └── model_config.yaml
 ├── app/
-│   ├── main.py
+│   ├── app.py
 │   └── predict.py
+├── prometheus/
+│   ├── prometheus.yml
+├── logs/
 ├── Dockerfile
-├── .github/workflows/ci-cd.yml
+├── docker-compose.yml
+├── .github/workflows/ci.yml
 ├── requirements.txt
 └── README.md
 ```
 
+## 🧪 Features
+
+- Train ML models and track experiments with MLflow.
+- Optimize hyperparameters with Optuna.
+- Deploy API using FastAPI.
+- Track error and prediction logs in SQLite.
+- Visualize metrics and logs in Grafana.
+- Access SQLite DB via SQLite Web.
+- Prometheus scrapes metrics exposed by FastAPI.
+- End-to-end pipeline automated using GitHub Actions.
+
 ---
 
-## ⚙️ Setup Instructions
+## Setup Instructions
 
 ```bash
 # Create virtual environment
@@ -63,7 +80,7 @@ pip install -r requirements.txt
 
 ---
 
-## 🧪 Model Training (with MLflow + Optuna)
+## Model Training (with MLflow + Optuna)
 
 ```bash
 python src/train_model.py
@@ -73,7 +90,7 @@ MLflow logs are saved under `mlruns/`. The best model is saved to `models/` or r
 
 ---
 
-## 🌐 Run Locally with FastAPI
+## Run Locally with FastAPI
 
 ```bash
 uvicorn app.main:app --reload
@@ -92,55 +109,54 @@ uvicorn app.main:app --reload
 - Output:
 ```json
 {
-  "prediction": "setosa"
+  "prediction": "class label"
 }
 ```
 
 ---
 
-## 🐳 Docker Usage
+## Docker Usage
 
 ```bash
 # Build Docker image
-docker build -t iris-classifier-app .
+docker build -t iris-fastapi-app:latest .
 
 # Run container
-docker run -d -p 8000:8000 iris-classifier-app
+docker run -p 8000:8000 iris-fastapi-app
+
+# docker directory access
+docker exec -it ef5e2dc2fd3d /bin/bash
+
+# Run with Docker Compose (Locally)
+```bash
+docker-compose up --build
+```
+
+- Access FastAPI: [http://localhost:8000](http://localhost:8000)
+- Access Grafana: [http://localhost:3000](http://localhost:3000) (Login: `admin` / `admin`)
+- Access Prometheus: [http://localhost:9090](http://localhost:9090)
+- Access SQLite Web: [http://localhost:8080](http://localhost:8080)
+
 ```
 
 ---
 
-## 🚀 CI/CD & EC2 Deployment
+## 🚀 CI/CD & EC2 Deployment(Optional)
 
 - GitHub Actions workflow builds the image and pushes to AWS ECR
 - SSHs into EC2 instance
 - Pulls the latest image and runs the container
 - Secrets are managed using GitHub Repository Settings
+Secrets to add in GitHub:
+- `DOCKER_USERNAME`, `DOCKER_PASSWORD`
+- `EC2_HOST`, `EC2_USER`, `EC2_KEY` # for AWS cloud set up
 
 ---
 
-## 📊 Logging & Monitoring
+## Logging & Monitoring
 
-- ✅ Logs are streamed to **Amazon CloudWatch**
-- ⚙️ Prometheus + Grafana are set up locally (to be ported to EC2)
-
----
-
-## 🔁 A/B Testing
-
-- `baseline.py` runs a simpler baseline model
-- Run both models and expose endpoints `/predict-a` and `/predict-b`
-
----
-
-## 🧱 Architecture Diagram
-
-```
-User ─▶ FastAPI ─▶ Docker ─▶ Model ─▶ MLflow
-           │           │         │
-           ▼           ▼         ▼
-     GitHub Actions → AWS EC2 → CloudWatch
-```
+- SQLite + Grafana Dashboard
+- Prometheus + Grafana are set up locally (to be ported to EC2)
 
 ---
 
@@ -155,25 +171,3 @@ Optional: Parameterize dataset name for multi-dataset support.
 
 ---
 
-## ✅ Completion Checklist
-
-| Task                           | Status     |
-|--------------------------------|------------|
-| Data Preprocessing             | ✅ Completed |
-| Model Training                 | ✅ Completed |
-| MLflow Integration             | ✅ Completed |
-| Hyperparameter Tuning (Optuna)| ✅ Completed |
-| FastAPI API                    | ✅ Completed |
-| Dockerization                  | ✅ Completed |
-| CI/CD with GitHub Actions      | ✅ Completed |
-| EC2 Deployment                 | ✅ Completed |
-| CloudWatch Logging             | ✅ Completed |
-| Monitoring (Grafana/Prometheus)| 🔄 Local Testing |
-| A/B Testing                    | 🔄 Local Setup |
-| Final README                   | ✅ You're here! |
-
----
-
-## 🧠 Author
-
-**Shubh** – Building hands-on expertise in full MLOps workflows for production-ready machine learning systems.

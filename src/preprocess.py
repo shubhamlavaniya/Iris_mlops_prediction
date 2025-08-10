@@ -14,6 +14,7 @@ def load_and_preprocess_iris():
     iris = load_iris()
     
     # Create DataFrame
+    
     df = pd.DataFrame(data=iris.data, columns=iris.feature_names)
     df['target'] = iris.target
     df['target_name'] = df['target'].apply(lambda x: iris.target_names[x])
@@ -39,7 +40,7 @@ def load_and_preprocess_iris():
     # Add target back
     df_scaled['target'] = df['target']
 
-    # Save to processed folder
+    # Save to processed folder 
     output_path = "data/processed"
     os.makedirs(output_path, exist_ok=True)
     file_path = os.path.join(output_path, "iris_cleaned.csv")
