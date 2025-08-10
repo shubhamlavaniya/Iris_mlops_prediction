@@ -1,4 +1,4 @@
-# 🤖 End-to-End MLOps Pipeline – Iris Classifier Project
+# 🤖 End-to-End MLOps Pipeline – Iris Classifier Project - Group 64
 
 This project demonstrates a complete **End-to-End MLOps workflow** using the Iris dataset. It includes model training, hyperparameter tuning, experiment tracking, serving via FastAPI, containerization with Docker, CI/CD with GitHub Actions, and deployment to AWS EC2 with logging and monitoring.
 
