@@ -4,13 +4,13 @@ This project demonstrates a complete **End-to-End MLOps workflow** using the Iri
 
 ---
 
-## 📌 Objective
+## 📌 Objective 
 
 Automate and scale the lifecycle of an ML model from experimentation to production deployment, using real-world MLOps tools and cloud infrastructure.
 
 ---
 
-## 🧰 Tech Stack
+## 🧰 Tech Stack 
 
 - **Data & Modeling**: scikit-learn, pandas, Optuna
 - **Experiment Tracking**: MLflow
