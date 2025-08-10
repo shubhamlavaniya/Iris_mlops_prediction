@@ -4,7 +4,7 @@ This project demonstrates a complete **End-to-End MLOps workflow** using the Iri
 
 ---
 
-## 📌 Objective
+## Objective
 
 Automate and scale the lifecycle of an ML model from experimentation to production deployment, using real-world MLOps tools and cloud infrastructure.
 
@@ -24,7 +24,7 @@ Automate and scale the lifecycle of an ML model from experimentation to producti
 
 ---
 
-## 🗂️ Folder Structure
+## Folder Structure
 
 ```
 .
@@ -54,7 +54,7 @@ Automate and scale the lifecycle of an ML model from experimentation to producti
 └── README.md
 ```
 
-## 🧪 Features
+## Features
 
 - Train ML models and track experiments with MLflow.
 - Optimize hyperparameters with Optuna.
@@ -141,7 +141,7 @@ docker-compose up --build
 
 ---
 
-## 🚀 CI/CD & EC2 Deployment(Optional)
+## CI/CD & EC2 Deployment(Optional)
 
 - GitHub Actions workflow builds the image and pushes to AWS ECR
 - SSHs into EC2 instance
@@ -167,29 +167,5 @@ To use a new dataset:
 2. Update `data_loader.py` to match new schema
 3. Adjust `model_config.yaml` with new features and target
 
-Optional: Parameterize dataset name for multi-dataset support.
 
 ---
-
-## ✅ Completion Checklist
-
-| Task                           | Status     |
-|--------------------------------|------------|
-| Data Preprocessing             | ✅ Completed |
-| Model Training                 | ✅ Completed |
-| MLflow Integration             | ✅ Completed |
-| Hyperparameter Tuning (Optuna)| ✅ Completed |
-| FastAPI API                    | ✅ Completed |
-| Dockerization                  | ✅ Completed |
-| CI/CD with GitHub Actions      | ✅ Completed |
-| EC2 Deployment                 | ✅ Completed |
-| CloudWatch Logging             | ✅ Completed |
-| Monitoring (Grafana/Prometheus)| 🔄 Local Testing |
-| A/B Testing                    | 🔄 Local Setup |
-| Final README                   | ✅ You're here! |
-
----
-
-## 🧠 Author
-
-**Shubh** – Building hands-on expertise in full MLOps workflows for production-ready machine learning systems.
