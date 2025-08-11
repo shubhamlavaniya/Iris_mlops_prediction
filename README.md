@@ -34,18 +34,18 @@ Automate and scale the lifecycle of an ML model from experimentation to producti
 │   ├── raw/
 │   └── processed/
 ├── src/
-│   ├── baseline.py
+│   ├── app/
+│     └── app.py
+│     └── predict.py
+│   ├── train_baseline.py
 │   ├── train_model.py
 │   ├── data_loader.py
-│   ├── logging.py
+│   ├── app_logging.py
 │   ├── model_builder.py
 │   ├── preprocess.py
 │   ├── utils.py
 │   └── config/
 │       └── model_config.yaml
-├── app/
-│   ├── app.py
-│   └── predict.py
 ├── prometheus/
 │   ├── prometheus.yml
 ├── logs/
