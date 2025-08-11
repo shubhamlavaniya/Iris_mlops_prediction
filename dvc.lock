@@ -1,0 +1,25 @@
+schema: '2.0'
+stages:
+  get_data:
+    cmd: python src/preprocess.py
+    outs:
+    - path: data/raw/iris_raw.csv
+      hash: md5
+      md5: 9b81a5b2beab90b5e381dfb33627d536
+      size: 4189
+  preprocess:
+    cmd: python src/preprocess.py
+    deps:
+    - path: data/raw/iris_raw.csv
+      hash: md5
+      md5: 9b81a5b2beab90b5e381dfb33627d536
+      size: 4189
+    - path: src/preprocess.py
+      hash: md5
+      md5: 62a1daddcf2480d2321eec1c62ed8cda
+      size: 2122
+    outs:
+    - path: data/processed/iris_cleaned.csv
+      hash: md5
+      md5: 52f64c81f782cb99e8b31d6a2140b84e
+      size: 21021

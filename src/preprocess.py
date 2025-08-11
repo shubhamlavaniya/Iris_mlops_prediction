@@ -1,5 +1,3 @@
-# src/preprocess.py
-
 import pandas as pd
 from sklearn.datasets import load_iris
 from sklearn.preprocessing import StandardScaler
@@ -9,15 +7,25 @@ import logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-def load_and_preprocess_iris():
-    logger.info("Loading Iris dataset")
+def get_data(output_path="data/raw"):
+    """Loads Iris data from the API and saves it as a CSV."""
+    logger.info("Loading Iris dataset from scikit-learn API")
     iris = load_iris()
-    
-    # Create DataFrame
     
     df = pd.DataFrame(data=iris.data, columns=iris.feature_names)
     df['target'] = iris.target
     df['target_name'] = df['target'].apply(lambda x: iris.target_names[x])
+
+    os.makedirs(output_path, exist_ok=True)
+    file_path = os.path.join(output_path, "iris_raw.csv")
+    
+    logger.info(f"Saving raw data to {file_path}")
+    df.to_csv(file_path, index=False)
+
+def preprocess_data(input_path="data/raw/iris_raw.csv", output_path="data/processed"):
+    """Loads raw data, performs feature engineering and scaling, and saves it."""
+    logger.info(f"Loading raw data from {input_path}")
+    df = pd.read_csv(input_path)
 
     # Clean column names
     df.columns = [col.replace(" (cm)", "").replace(" ", "_") for col in df.columns]
@@ -41,7 +49,6 @@ def load_and_preprocess_iris():
     df_scaled['target'] = df['target']
 
     # Save to processed folder 
-    output_path = "data/processed"
     os.makedirs(output_path, exist_ok=True)
     file_path = os.path.join(output_path, "iris_cleaned.csv")
     
@@ -49,4 +56,5 @@ def load_and_preprocess_iris():
     df_scaled.to_csv(file_path, index=False)
 
 if __name__ == "__main__":
-    load_and_preprocess_iris()
+    get_data()
+    preprocess_data()

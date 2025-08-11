@@ -1,0 +1,14 @@
+stages:
+  get_data:
+    cmd: python src/preprocess.py
+    # `get_data` stage doesn't have data dependencies, it generates the data
+    outs:
+      - data/raw/iris_raw.csv
+
+  preprocess:
+    cmd: python src/preprocess.py
+    deps:
+      - data/raw/iris_raw.csv
+      - src/preprocess.py
+    outs:
+      - data/processed/iris_cleaned.csv

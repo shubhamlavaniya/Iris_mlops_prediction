@@ -14,7 +14,9 @@ pyarrow==14.0.2
 joblib
 prometheus-fastapi-instrumentator
 sqlalchemy 
-psycopg2-binary
+#psycopg2-binary
 prometheus_client
+dvc
+
 
 
