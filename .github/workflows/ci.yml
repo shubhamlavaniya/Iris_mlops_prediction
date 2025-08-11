@@ -21,7 +21,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
- # --- DVC Integration (Uncomment to enable for cloud remotes) ---
+ # -- DVC Integration (Uncomment to enable for cloud remotes) ---
     # NOTE: This section will not work with a local DVC remote on your machine.
     # For a CI/CD pipeline, DVC remote storage must be a cloud service (e.g., S3).
     #
