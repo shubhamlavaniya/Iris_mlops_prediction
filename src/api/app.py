@@ -1,4 +1,7 @@
-# src/api/app.py (Updated)
+# This script is developed to provide an API for the Iris Classifier model.
+# It includes endpoints for making predictions and handling input validation.
+# The API uses FastAPI and integrates with MLflow for model management.
+
 from fastapi import FastAPI, HTTPException, Request, status
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse

@@ -1,3 +1,6 @@
+# This script is developed to build and return machine learning models based on the provided model name and parameters.
+# It includes functions to create instances of various models like Logistic Regression, Random Forest, Decision Tree, and SVC.
+
 import logging
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier

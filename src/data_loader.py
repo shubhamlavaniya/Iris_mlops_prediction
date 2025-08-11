@@ -1,4 +1,4 @@
-# this file is developed to load data from config file
+# this script is developed to load data from config file
 # and provide utility functions for data loading and preprocessing. use it to
 # load data in your main application or scripts.
 

@@ -1,3 +1,7 @@
+# This script is used to train and tune machine learning models using Optuna for hyperparameter optimization.
+# It loads the Iris dataset, splits it into training and validation sets, and optimizes multiple models.
+# The best model is registered in MLflow and promoted to production.
+
 import pandas as pd
 import optuna
 import importlib

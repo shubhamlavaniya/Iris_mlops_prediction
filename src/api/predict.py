@@ -1,4 +1,6 @@
-# src/api/predict.py
+# This script is developed to provide an API for the Iris Classifier model.
+# It includes endpoints for making predictions and handling input validation.
+# The API uses FastAPI and integrates with MLflow for model management.
 
 import mlflow.pyfunc
 import pandas as pd

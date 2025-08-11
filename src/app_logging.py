@@ -1,4 +1,6 @@
-# src/logging.py (Refactored)
+# This script is developed to log predictions and errors in a database.
+# It includes functions to initialize the database, log predictions, and log errors.
+# The database is SQLite by default but can be configured via an environment variable.
 
 from sqlalchemy import create_engine, Column, String, Float, DateTime, Integer
 from sqlalchemy.ext.declarative import declarative_base

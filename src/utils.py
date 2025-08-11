@@ -1,3 +1,6 @@
+# This script is developed to load configuration files and sample hyperparameters for model tuning.
+# It includes functions to load YAML configuration files and sample hyperparameters using Optuna.
+
 import yaml
 
 def load_config(path: str) -> dict:

@@ -1,3 +1,6 @@
+# This script is developed to load the Iris dataset, preprocess it, and save it for further use.
+# It includes functions to load raw data, perform feature engineering, and save the processed data.
+
 import pandas as pd
 from sklearn.datasets import load_iris
 from sklearn.preprocessing import StandardScaler
