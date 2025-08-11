@@ -1,4 +1,13 @@
-# End-to-End MLOps Pipeline – Iris Classifier Project - Group 64
+# Team - Group 64
+SHALINI DIXIT - 2023ac05474@wilp.bits-pilani.ac.in – Contribution (100%)
+
+SHUBHAM LAVANIYA  - 2023ac05899@wilp.bits-pilani.ac.in – Contribution (100%)
+
+RAYAPUREDDYAVVMANOJKUMAR - 2023ad05128@wilp.bits-pilani.ac.in  – Contribution (100%)
+
+RAVISH KUMAR J N - 2023ac05178@wilp.bits-pilani.ac.in - Contribution (100%)
+
+# End-to-End MLOps Pipeline – Iris Classifier Project
 
 This project demonstrates a complete **End-to-End MLOps workflow** using the Iris dataset. It includes data versioning with DVC, model training, hyperparameter tuning, experiment tracking, serving via FastAPI, containerization with Docker, CI/CD with GitHub Actions, and deployment to AWS EC2 with logging and monitoring.
 
