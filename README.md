@@ -1,6 +1,6 @@
 # End-to-End MLOps Pipeline – Iris Classifier Project - Group 64
 
-This project demonstrates a complete **End-to-End MLOps workflow** using the Iris dataset. It includes model training, hyperparameter tuning, experiment tracking, serving via FastAPI, containerization with Docker, CI/CD with GitHub Actions, and deployment to AWS EC2 with logging and monitoring.
+This project demonstrates a complete **End-to-End MLOps workflow** using the Iris dataset. It includes data versioning with DVC, model training, hyperparameter tuning, experiment tracking, serving via FastAPI, containerization with Docker, CI/CD with GitHub Actions, and deployment to AWS EC2 with logging and monitoring.
 
 ---
 
@@ -13,6 +13,7 @@ Automate and scale the lifecycle of an ML model from experimentation to producti
 ## Tech Stack
 
 - **Data & Modeling**: scikit-learn, pandas, Optuna
+- **Data Version Control**: DVC
 - **Experiment Tracking**: MLflow
 - **Model Serving**: FastAPI
 - **Containerization**: Docker
@@ -28,6 +29,7 @@ Automate and scale the lifecycle of an ML model from experimentation to producti
 
 ```
 .
+├── .dvc/
 ├── data/
 │   ├── raw/
 │   └── processed/
@@ -47,15 +49,17 @@ Automate and scale the lifecycle of an ML model from experimentation to producti
 ├── prometheus/
 │   ├── prometheus.yml
 ├── logs/
+├── .github/workflows/ci.yml
 ├── Dockerfile
 ├── docker-compose.yml
-├── .github/workflows/ci.yml
+├── dvc.yaml
 ├── requirements.txt
 └── README.md
 ```
 
 ## Features
 
+- **Version Data and Models** with DVC for full reproducibility.
 - Train ML models and track experiments with MLflow.
 - Optimize hyperparameters with Optuna.
 - Deploy API using FastAPI.
@@ -79,6 +83,26 @@ pip install -r requirements.txt
 ```
 
 ---
+
+## DVC
+
+# 1. Initialize DVC in the project root
+dvc init
+
+# 2. Configure a remote storage (e.g., a local directory)
+# This directory should be outside your project folder.
+mkdir ~/dvc_remote
+dvc remote add -d <remote_name> <remote_path>
+
+# 3. Run the DVC pipeline to generate and version data
+dvc repro
+
+# 4. Push the data to the remote storage
+dvc push
+
+# 5. Commit the DVC files to Git
+git add .
+git commit -m "Initialize DVC and run pipeline"
 
 ## Model Training (with MLflow + Optuna)
 
@@ -141,7 +165,10 @@ docker-compose up --build
 
 ---
 
+```
+
 ## CI/CD & EC2 Deployment(Optional)
+
 
 - GitHub Actions workflow builds the image and pushes to AWS ECR
 - SSHs into EC2 instance
@@ -152,6 +179,7 @@ Secrets to add in GitHub:
 - `EC2_HOST`, `EC2_USER`, `EC2_KEY` # for AWS cloud set up
 
 ---
+
 
 ## Logging & Monitoring
 

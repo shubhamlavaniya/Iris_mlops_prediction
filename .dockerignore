@@ -1,0 +1,3 @@
+# placeholder for .dockerignore file
+# This file is used to specify files and directories that should be ignored by Docker when building images
+# It helps to keep the Docker image clean and free from unnecessary files

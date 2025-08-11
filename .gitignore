@@ -3,6 +3,6 @@ __pycache__/
 .DS_Store
 *.pkl
 mlruns/
-.dvc/
+.dvc/cache/
 *.log
 *.csv
